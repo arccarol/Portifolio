@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo"><span>Carolina Arcuri</span></a>
+    
+        <ul class="nav-links">
+            <li><a href="#about">Sobre </a></li>
+            <li><a href="#experience">Experiência</a></li>
+            <li><a href="#projects">Projetos</a></li>
+        </ul>
+    
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    
+        <button class="visit-btn" onclick="window.open('https://github.com/arccarol', '_blank')">
+            Visite GitHub
+        </button>
+    </header>
+    
+
+    <section id="about" class="about">
+        <div class="about-container">
+          <img src="image.jpeg" alt="">
+          <div class="gif">
+            <img src="https://video-public.canva.com/VAEvYYYoT6w/v/77426b7544.gif" alt="GIF de exemplo" />
+          </div>
+          <div class="info-box">
+            <div class="text">
+              <h3>Oi, eu sou a</h3>
+              <h1>Carolina Arcuri</h1>
+              <span>Desenvolvedora Frontend </span>
+            </div>
+            <div class="btn-group">
+              <div class="btn" onclick="downloadPDF()">Download CV</div>
+            </div>
+            <div class="socials">
+                <i class="fa-brands fa-github" onclick="window.open('https://github.com/arccarol', '_blank')"></i>
+                <i class="fa-brands fa-linkedin"  onclick="window.open('https:www.linkedin.com/in/carolina-arcuri-filipe-6359ab208', '_blank')"></i>
+                <i class="fa-solid fa-envelope" onclick="window.location.href='mailto:carolinaarcurif@hotmail.com'"></i>
+
+            </div>
+          </div>
+        </div>
+    </section>
+      
+      <section id="experience" class="experience">
+
+
+        <h2 class="section-title">Experiência</h2>
+        <div class="experience-info">
+          <div class="grid">
+            <div class="grid-card">
+            <i class="fa-solid fa-code"></i>
+            <span>Desenvolvedora Frontend</span>
+            <h4>3 Anos</h4>
+            <p>Programação com HTML, CSS e JavaScript.</p>
+          </div>
+            <div class="grid-card">
+                <i class="fa-solid fa-database"></i>
+              <span>Análise de Dados</span>
+              <h4>2 Anos</h4>
+              <p>Estudo sobre Banco de Dados e Power BI com R e DAX. </p>
+            </div>
+            <div class="grid-card">
+                <i class="fa-brands fa-java"></i>
+              <span>Linguagem Java</span>
+              <h4>3 Anos</h4>
+              <p>Desenvolvimento Backend e Criação de Sites Web com java.</p>
+            </div>
+            <div class="grid-card">
+            <i class="fa-brands fa-python"></i>
+              <span>Linguagem Python</span>
+              <h4>1 Ano</h4>
+              <p>Uso de Python na programação e análise de dados.</p>
+            </div>
+          </div> 
+          <img src="image.jpeg" alt="">
+        </div>
+
+        </section>
+ 
+       
+        <section id="projects" class="projects">
+            <h2 class="section-title">Projetos Recentes</h2>
+            <div class="projects-grid">
+              <div class="project-card">
+                <img src="project01.png" alt="">
+                <h3 class="projetos">Login Page</h3>
+                <p>Página de login em frontend, com design e campos para e-mail e senha.</p>
+                <div class="btn-group">
+                  <div class="btn" onclick="window.open('https://github.com/arccarol/Pagina_login', '_blank')">Github Repo</div>
+                </div>
+              </div>
+                <div class="project-card">
+                  <img src="project02.png" alt="">
+                  <h3 class="projetos">Login Page</h3>
+                  <p>Página de login e cadastro com verificação de acesso ao sistema. Backend desenvolvido em Java.</p>
+                  <div class="btn-group">
+                    <div class="btn" onclick="window.open('https://github.com/arccarol/ProjetoLogin', '_blank')">Github Repo</div>
+                  </div>
+                </div>
+                <div class="project-card">
+                    <img src="project03.png" alt="">
+                    <h3 class="projetos">Sistema de Gestão de Perfumaria</h3>
+                    <p>Sistema de gestão para uma micro perfumaria, com múltiplas funcionalidades.</p>
+                    <div class="btn-group">
+                        <div class="btn" onclick="window.open('https://github.com/arccarol/TCCFinal', '_blank')">Github Repo</div>
+                    </div>
+                  </div>
+              </div>
+          </section>
+
+                  
+
+    <script src="script.js"></script>
+</body>
+</html>
