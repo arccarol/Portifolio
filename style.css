@@ -493,8 +493,8 @@ section {
 
     .gif {
         position: absolute; /* Posicionar a GIF de forma absoluta */
-        top: 30%; /* Ajustar a posição vertical conforme necessário */
-        left: 18%; /* Ajustar a posição horizontal conforme necessário */
+        top: 40%; /* Ajustar a posição vertical conforme necessário */
+        left: 14%; /* Ajustar a posição horizontal conforme necessário */
         width: 15vw; /* Ajustar o tamanho da GIF conforme necessário */
         z-index: 20; /* Trazer a GIF para frente */
         pointer-events: none; /* Garantir que a GIF não interfira na interação com a imagem principal */
