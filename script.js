@@ -4,8 +4,8 @@
 
     function downloadPDF() {
         const link = document.createElement('a');
-        link.href = './Curriculo.pdf';
-        link.download = 'Curriculo.pdf';
+        link.href = './Curriculo1.pdf';
+        link.download = 'Curriculo1.pdf';
         link.click();
     }
 //menu
