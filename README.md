@@ -27,5 +27,5 @@ Este projeto é um site pessoal/portfólio desenvolvido com HTML, CSS e JavaScri
 
 <img src="mobile2.jpeg" alt="Banner da Landing Page" width="40%" height="50%" />
 
-<img src="mobile2.jpeg" alt="Banner da Landing Page" width="40%" height="50%" />
+<img src="mobile3.jpeg" alt="Banner da Landing Page" width="40%" height="50%" />
   
