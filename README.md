@@ -7,8 +7,6 @@ Este projeto é um site pessoal/portfólio desenvolvido com HTML, CSS e JavaScri
 - HTML5
 - CSS3
 - JavaScript (se aplicável)
-- Fontes do Google Fonts (opcional)
-- Imagens e SVGs personalizados
 
 ## 🎯 Funcionalidades
 
