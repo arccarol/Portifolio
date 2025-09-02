@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=M+PLUS+Rounded+1c&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka";
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: rgb(89, 168, 100);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    z-index: 1000;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+   
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+.nav-links li {
+    margin-top: 1%;
+}
+
+li a {
+    position: relative;
+    color: white;
+    font-weight: 300;
+}
+.header{
+
+    a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    height: 5px;
+    top: 25px;
+    border-radius: 1rem;
+    transition: 0.3s ease-in-out;
+    background: #228b22
+
+}
+    }
+
+
+a:hover::before {
+    width: 100%;
+}
+
+.visit-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    font-family: "Nunito";
+    font-weight: 800;
+    font-size: 0.9srem;
+    color: white;
+    cursor: pointer;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+    background: #529752;
+    text-transform: uppercase;
+
+}
+
+.visit-btn:hover {
+    background: #267426;
+    transform: scale(1.03);
+}
+
+#menu-icon {
+    font-size: 2rem;
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 8rem 3%;
+    width: 100%;
+    position: relative;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -120px;
+}
+
+.about .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.about img {
+    width: 25vw;
+    border-radius: 50%;
+    position: relative; /* Definir o contêiner como referência de posicionamento */
+}
+
+.gif {
+    position: absolute; /* Posicionar a GIF de forma absoluta */
+    top: 60%; /* Ajustar a posição vertical conforme necessário */
+    left: 10%; /* Ajustar a posição horizontal conforme necessário */
+    width: 10vw; /* Ajustar o tamanho da GIF conforme necessário */
+    z-index: 20; /* Trazer a GIF para frente */
+    pointer-events: none; /* Garantir que a GIF não interfira na interação com a imagem principal */
+}
+
+.gif img {
+    border-radius: 0%;
+    width: 100%; /* Ajustar a largura dentro do contêiner GIF */
+}
+
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.info-box h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.info-box h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.info-box span {
+    background: #228b22;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid rgb(89, 168, 100);
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: rgb(89, 168, 100);
+    color: white;
+  }
+  
+  .socials {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .socials i {
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.socials i:hover {
+    transform: scale(1.2);
+}
+
+.section-title{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+
+
+.experience-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.experience-info img {
+    width: 24vw;
+    border-radius: 3rem;
+    flex-shrink: 0; /* Evita que a imagem diminua demais */
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.grid-card {
+    border: 2px solid rgb(89, 168, 100);
+    border-radius: 3rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.grid-card:hover {
+    transform: scale(1.02);
+    background-color: rgb(89, 168, 100);
+    color: white;
+
+  
+}
+
+.skill-card:hover{
+
+    img{
+    filter: brightness(0) invert(1);
+    }
+}
+
+.grid-card i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.grid-card span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: #205a20;
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(219, 219, 219);
+}
+
+::-webkit-scrollbar-thumb {
+    background:  rgb(89, 168, 100);
+}
+
+.projects {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: -250px;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .project-card.horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgb(67, 146, 43);
+    overflow: hidden;
+    gap: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* suaviza a transição */
+}
+
+.project-card.horizontal:hover {
+  transform: scale(1.03); /* aumenta 3% */
+  box-shadow: 0 4px 16px rgba(67, 146, 43, 0.5); /* sombra um pouco maior para destaque */
+
+}
+
+  
+  .project-card img {
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .project-info h3 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #205a20;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .project-info p {
+    color: #555;
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .btn-group .btn {
+    display: inline-block;
+    padding: 7px 40px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn-group .btn:hover {
+    background-color: rgb(89, 168, 100);
+    color: #ffffff;
+  }
+  
+
+  .section-title{
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /*responsivo*/
+
+
+  @media (max-width: 1280px) {
+    header {
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+    .about .about-container {
+        gap: 3rem;
+    }
+    .experience-info {
+        flex-direction: column;
+    }
+    .input-box input {
+        padding: 2rem 5rem;
+        font-size: 2.5rem;
+    }
+    .input input::placeholder {
+        font-size: 2.5rem;
+    }
+    .input-box i {
+        font-size: 2.5rem;
+    }
+
+    .experience-info img {
+        display: none; 
+    }
+
+    .gif {
+        position: absolute; 
+        top: 60%; 
+        left: 10%; 
+        width: 10vw; 
+        z-index: 20; 
+        pointer-events: none; 
+    }
+    
+    .gif img {
+        border-radius: 0%;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        gap: 1rem;
+        padding: 1rem 1rem;
+       
+    }
+
+    body{
+        overflow-x: hidden; /* Evita rolagem horizontal */
+    }
+
+    header .logo {
+        font-size: 1rem;
+    }
+
+    header .visit-btn {
+        display: none;
+    }
+
+    .input-box input{
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .input-box input::placeholder{
+        font-size: 1.5rem;
+    }
+    
+    .input-box i{
+        display: none;
+    }
+    
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+
+    .about-container{
+        flex-direction: column;
+    }
+
+    .experience-info img {
+        display: none; 
+    }
+
+    .about-container img {
+        width: 50vw;
+    }
+
+    .gif {
+        position: absolute; 
+        top: 43%; 
+        left: 25%; 
+        width: 15vw; 
+        z-index: 20; 
+        pointer-events: none; 
+    }
+    
+    .gif img {
+        border-radius: 0%;
+        width: 100%; 
+    }
+
+
+
+
+    .project-card.horizontal {
+        flex-direction: column;
+        text-align: center;
+        width: 100%; 
+        max-width: 900px; 
+        margin-top: -30px;
+      }
+    
+      .project-card.horizontal img {
+        width: 100%;
+        height: 200px;
+      }
+    
+      
+
+      .btn-group  {
+        display: inline-block;
+        padding: 0px 40px;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border-radius: 40px;
+        cursor: pointer;
+        transition: background 0.3s;
+        justify-items: center;
+      }
+
+      .project-card.horizontal .btn{
+
+        margin-left: -20px;
+
+      }
+
+      .project-card.horizontal a{
+        text-decoration: none; /* Remove o sublinhado */
+      }
+
+      .experience{
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+       
+        
+    }
+
+      
+
+    
+}
+
+
+@media (max-width: 600px) {
+    header #menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 3rem;
+        display: none;
+    }
+
+    .nav-links li {
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    header {
+        padding: 0.6rem 2rem;
+        gap: 3rem;
+    }
+    
+    header .logo {
+        font-size: 1.5rem;
+    }
+    
+    .about-container img {
+        width: 60vw;
+    }
+    
+    .input-box input {
+        padding: 0.5rem 3rem;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    
+    .input-box input::placeholder {
+        font-size: 1.5rem;
+    }
+    
+    footer ul {
+        gap: 1rem;
+    }
+
+    .experience-info img {
+        display: none; /* Esta linha esconderá as imagens */
+    }
+
+    .gif {
+        position: absolute; /* Posicionar a GIF de forma absoluta */
+        top: 32%; /* Ajustar a posição vertical conforme necessário */
+        left: 18%; /* Ajustar a posição horizontal conforme necessário */
+        width: 15vw; /* Ajustar o tamanho da GIF conforme necessário */
+        z-index: 20; /* Trazer a GIF para frente */
+        pointer-events: none; /* Garantir que a GIF não interfira na interação com a imagem principal */
+    }
+    
+    .gif img {
+        border-radius: 0%;
+        width: 100%; /* Ajustar a largura dentro do contêiner GIF */
+    }
+
+}
+
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas no desktop */
+        gap: 20px;
+        max-width: 100%;
+        margin: auto;
+        margin-top: -100px;
+      }
+      
+      .skill-card {
+        background-color: #fff;
+        border: 2px solid rgb(89, 168, 100);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+      
+      .skill-card img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+        filter: brightness(0) invert(0);
+      }
+      
+      .skill-card p {
+        font-weight: 400;
+        font-size: 20px;
+        color: #000000;
+      }
+      
+      .skill-card:hover {
+        transform: scale(1.05);
+      }
+
+      .skill-card:hover {
+        background-color: rgb(89, 168, 100);
+        border: 2px solid rgb(89, 168, 100);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
+
+        p{
+            color: #ffffff;
+        }
+        
+      }
+
+      .projects{ 
+        margin-bottom: -800px;
+
+        h2{
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+       
+        #tituloprojetos{
+          margin-bottom: -30px;
+        }
+        #subproject{
+          margin-top: 90px;
+          margin-bottom: 40px;
+        }
+        
+       
+      }
+
+
+      
+
+
+      
+      /* Responsividade: 2 colunas no mobile */
+      @media (max-width: 768px) {
+        .skills-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+           
+      
+      @keyframes slideFromLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes slideFromRight {
+        from {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      .project-card {
+        opacity: 0;
+        /* sem animação ativa por padrão */
+      }
+      
+      .project-card.slide-in-left {
+        animation: slideFromLeft 0.7s forwards ease-out;
+      }
+      
+      .project-card.slide-in-right {
+        animation: slideFromRight 0.7s forwards ease-out;
+      }
+      
+
+      /* Animação vindo da direita */
+@keyframes slideFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Aplica animação para entrar da esquerda */
+  .skill-card.slide-in-left {
+    animation: slideFromLeft 0.6s forwards ease-out;
+  }
+  
+  /* Aplica animação para entrar da direita */
+  .skill-card.slide-in-right {
+    animation: slideFromRight 0.6s forwards ease-out;
+  }
+
+
+  @media (max-width: 768px) {
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
+  }
+  
+  
