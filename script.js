@@ -1,3 +1,22 @@
+// --- Google Analytics (GA4) --- //
+(function() {
+  // Cria o script de carregamento
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-73HCTKS4C4';
+  document.head.appendChild(script);
+
+  // Inicializa o dataLayer e define a função gtag()
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ window.dataLayer.push(arguments); }
+
+  // Quando o script carregar, inicializa o GA
+  script.onload = function() {
+    gtag('js', new Date());
+    gtag('config', 'G-73HCTKS4C4');
+    console.log('✅ Google Analytics inicializado');
+  };
+})();
 
 
 //baixar curriculo automaticamente
@@ -103,5 +122,3 @@
   function openPDF() {
     window.open('Curriculo.pdf', '_blank');
 }
-
-  
