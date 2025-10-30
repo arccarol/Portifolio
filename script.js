@@ -18,25 +18,6 @@
   };
 })();
 
-//botão cv
-document.addEventListener('DOMContentLoaded', () => {
-  // Seleciona o botão pelo texto ou href
-  const botaoCV = document.querySelector('a[href="Curriculo.pdf"]');
-
-  if (botaoCV) {
-    botaoCV.addEventListener('click', () => {
-      // Envia o evento para o Google Analytics
-      gtag('event', 'abrir_cv', {
-        event_category: 'Currículo',
-        event_label: 'Botão Abrir CV',
-        value: 1
-      });
-      console.log('📄 Evento enviado: abrir_cv');
-    });
-  } else {
-    console.warn('⚠️ Botão "Abrir CV" não encontrado.');
-  }
-});
 
 //baixar curriculo automaticamente
 
@@ -141,4 +122,25 @@ document.addEventListener('DOMContentLoaded', () => {
   function openPDF() {
     window.open('Curriculo.pdf', '_blank');
 }
+
+
+//botão cv
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleciona o botão pelo texto ou href
+  const botaoCV = document.querySelector('a[href="Curriculo.pdf"]');
+
+  if (botaoCV) {
+    botaoCV.addEventListener('click', () => {
+      // Envia o evento para o Google Analytics
+      gtag('event', 'abrir_cv', {
+        event_category: 'Currículo',
+        event_label: 'Botão Abrir CV',
+        value: 1
+      });
+      console.log('📄 Evento enviado: abrir_cv');
+    });
+  } else {
+    console.warn('⚠️ Botão "Abrir CV" não encontrado.');
+  }
+});
 
