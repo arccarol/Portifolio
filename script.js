@@ -1,20 +1,17 @@
 // --- Google Analytics (GA4) --- //
 (function() {
-  // Cria o script de carregamento
   const script = document.createElement('script');
   script.async = true;
   script.src = 'https://www.googletagmanager.com/gtag/js?id=G-73HCTKS4C4';
   document.head.appendChild(script);
 
-  // Inicializa o dataLayer e define a função gtag()
   window.dataLayer = window.dataLayer || [];
-  function gtag(){ window.dataLayer.push(arguments); }
+  window.gtag = function(){ window.dataLayer.push(arguments); }; // <- define gtag global
 
-  // Quando o script carregar, inicializa o GA
   script.onload = function() {
     gtag('js', new Date());
     gtag('config', 'G-73HCTKS4C4');
-    console.log('✅ Google Analytics inicializado');
+    console.log('✅ GA4 carregado');
   };
 })();
 
@@ -123,21 +120,22 @@
     window.open('Curriculo.pdf', '_blank');
 }
 
-
-//botão cv
+//botao CV
 document.addEventListener('DOMContentLoaded', () => {
-  // Seleciona o botão pelo texto ou href
   const botaoCV = document.querySelector('a[href="Curriculo.pdf"]');
 
   if (botaoCV) {
     botaoCV.addEventListener('click', () => {
-      // Envia o evento para o Google Analytics
-      gtag('event', 'abrir_cv', {
-        event_category: 'Currículo',
-        event_label: 'Botão Abrir CV',
-        value: 1
-      });
-      console.log('📄 Evento enviado: abrir_cv');
+      if (typeof gtag === 'function') {
+        gtag('event', 'abrir_cv', {
+          event_category: 'Currículo',
+          event_label: 'Botão Abrir CV',
+          value: 1
+        });
+        console.log('📄 Evento enviado: abrir_cv');
+      } else {
+        console.warn('⚠️ gtag ainda não foi carregado.');
+      }
     });
   } else {
     console.warn('⚠️ Botão "Abrir CV" não encontrado.');
